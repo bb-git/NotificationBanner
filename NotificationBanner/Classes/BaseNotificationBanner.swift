@@ -217,6 +217,10 @@ open class BaseNotificationBanner: UIView {
         let swipeUpGesture = UISwipeGestureRecognizer(target: self, action: #selector(onSwipeUpGestureRecognizer))
         swipeUpGesture.direction = .up
         addGestureRecognizer(swipeUpGesture)
+     
+        let swipeUpGestureDown = UISwipeGestureRecognizer(target: self, action: #selector(onSwipeUpGestureRecognizer))
+        swipeUpGestureDown.direction = .down
+        addGestureRecognizer(swipeUpGestureDown)
     }
 
     required public init?(coder aDecoder: NSCoder) {
